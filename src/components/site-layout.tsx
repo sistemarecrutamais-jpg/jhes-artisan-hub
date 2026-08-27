@@ -113,6 +113,11 @@ export function SiteLayout({ children }: { children: ReactNode }) {
             <p className="mt-4 text-xs">
               © {new Date().getFullYear()} Ateliê da JHE. Todos os direitos reservados.
             </p>
+            <p className="mt-1 text-xs">
+              <Link to="/admin/login" className="hover:text-foreground hover:underline">
+                Área administrativa
+              </Link>
+            </p>
           </div>
         </div>
       </footer>
