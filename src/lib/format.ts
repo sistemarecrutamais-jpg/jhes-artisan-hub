@@ -36,6 +36,27 @@ export function addDaysISO(iso: string, days: number): string {
   return `${y}-${m}-${d}`;
 }
 
+/** First/last day (YYYY-MM-DD) of the calendar month `offsetMonths` away from now. */
+export function monthBoundsISO(offsetMonths: number): { start: string; end: string } {
+  const now = new Date();
+  const first = new Date(now.getFullYear(), now.getMonth() + offsetMonths, 1);
+  const last = new Date(now.getFullYear(), now.getMonth() + offsetMonths + 1, 0);
+  const toISO = (d: Date) =>
+    `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  return { start: toISO(first), end: toISO(last) };
+}
+
+/** Every ISO date from start to end, inclusive. */
+export function daysInRangeISO(startISO: string, endISO: string): string[] {
+  const days: string[] = [];
+  let cur = startISO;
+  while (cur <= endISO && days.length < 400) {
+    days.push(cur);
+    cur = addDaysISO(cur, 1);
+  }
+  return days;
+}
+
 export function daysBetween(startISO: string, endISO: string): number {
   const a = parseISODate(startISO).getTime();
   const b = parseISODate(endISO).getTime();

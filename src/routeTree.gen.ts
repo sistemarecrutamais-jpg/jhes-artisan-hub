@@ -10,11 +10,137 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CarrinhoRouteImport } from './routes/carrinho'
+import { Route as CheckoutRouteImport } from './routes/checkout'
+import { Route as ProdutosRouteImport } from './routes/produtos'
+import { Route as AdminIndexRouteImport } from './routes/admin/index'
+import { Route as AdminAgendaRouteImport } from './routes/admin/agenda'
+import { Route as AdminCategoriasRouteImport } from './routes/admin/categorias'
+import { Route as AdminChangePasswordRouteImport } from './routes/admin/change-password'
+import { Route as AdminConfiguracoesRouteImport } from './routes/admin/configuracoes'
+import { Route as AdminEsqueciSenhaRouteImport } from './routes/admin/esqueci-senha'
+import { Route as AdminFinanceiroRouteImport } from './routes/admin/financeiro'
+import { Route as AdminLoginRouteImport } from './routes/admin/login'
+import { Route as AdminMateriaisRouteImport } from './routes/admin/materiais'
+import { Route as AdminRedefinirSenhaRouteImport } from './routes/admin/redefinir-senha'
+import { Route as AdminRelatoriosRouteImport } from './routes/admin/relatorios'
+import { Route as ProdutoSlugRouteImport } from './routes/produto/$slug'
+import { Route as AdminPedidosIndexRouteImport } from './routes/admin/pedidos/index'
+import { Route as AdminPedidosIdRouteImport } from './routes/admin/pedidos/$id'
+import { Route as AdminPedidosNovoRouteImport } from './routes/admin/pedidos/novo'
+import { Route as AdminProdutosIndexRouteImport } from './routes/admin/produtos/index'
+import { Route as AdminProdutosIdRouteImport } from './routes/admin/produtos/$id'
+import { Route as AdminProdutosNovoRouteImport } from './routes/admin/produtos/novo'
 import { Route as ApiPublicImgSplatRouteImport } from './routes/api/public/img/$'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CarrinhoRoute = CarrinhoRouteImport.update({
+  id: '/carrinho',
+  path: '/carrinho',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CheckoutRoute = CheckoutRouteImport.update({
+  id: '/checkout',
+  path: '/checkout',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProdutosRoute = ProdutosRouteImport.update({
+  id: '/produtos',
+  path: '/produtos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminIndexRoute = AdminIndexRouteImport.update({
+  id: '/admin/',
+  path: '/admin/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminAgendaRoute = AdminAgendaRouteImport.update({
+  id: '/admin/agenda',
+  path: '/admin/agenda',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminCategoriasRoute = AdminCategoriasRouteImport.update({
+  id: '/admin/categorias',
+  path: '/admin/categorias',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminChangePasswordRoute = AdminChangePasswordRouteImport.update({
+  id: '/admin/change-password',
+  path: '/admin/change-password',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminConfiguracoesRoute = AdminConfiguracoesRouteImport.update({
+  id: '/admin/configuracoes',
+  path: '/admin/configuracoes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminEsqueciSenhaRoute = AdminEsqueciSenhaRouteImport.update({
+  id: '/admin/esqueci-senha',
+  path: '/admin/esqueci-senha',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminFinanceiroRoute = AdminFinanceiroRouteImport.update({
+  id: '/admin/financeiro',
+  path: '/admin/financeiro',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminLoginRoute = AdminLoginRouteImport.update({
+  id: '/admin/login',
+  path: '/admin/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminMateriaisRoute = AdminMateriaisRouteImport.update({
+  id: '/admin/materiais',
+  path: '/admin/materiais',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminRedefinirSenhaRoute = AdminRedefinirSenhaRouteImport.update({
+  id: '/admin/redefinir-senha',
+  path: '/admin/redefinir-senha',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminRelatoriosRoute = AdminRelatoriosRouteImport.update({
+  id: '/admin/relatorios',
+  path: '/admin/relatorios',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProdutoSlugRoute = ProdutoSlugRouteImport.update({
+  id: '/produto/$slug',
+  path: '/produto/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminPedidosIndexRoute = AdminPedidosIndexRouteImport.update({
+  id: '/admin/pedidos/',
+  path: '/admin/pedidos/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminPedidosIdRoute = AdminPedidosIdRouteImport.update({
+  id: '/admin/pedidos/$id',
+  path: '/admin/pedidos/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminPedidosNovoRoute = AdminPedidosNovoRouteImport.update({
+  id: '/admin/pedidos/novo',
+  path: '/admin/pedidos/novo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminProdutosIndexRoute = AdminProdutosIndexRouteImport.update({
+  id: '/admin/produtos/',
+  path: '/admin/produtos/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminProdutosIdRoute = AdminProdutosIdRouteImport.update({
+  id: '/admin/produtos/$id',
+  path: '/admin/produtos/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminProdutosNovoRoute = AdminProdutosNovoRouteImport.update({
+  id: '/admin/produtos/novo',
+  path: '/admin/produtos/novo',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiPublicImgSplatRoute = ApiPublicImgSplatRouteImport.update({
@@ -25,27 +151,181 @@ const ApiPublicImgSplatRoute = ApiPublicImgSplatRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/carrinho': typeof CarrinhoRoute
+  '/checkout': typeof CheckoutRoute
+  '/produtos': typeof ProdutosRoute
+  '/admin/agenda': typeof AdminAgendaRoute
+  '/admin/categorias': typeof AdminCategoriasRoute
+  '/admin/change-password': typeof AdminChangePasswordRoute
+  '/admin/configuracoes': typeof AdminConfiguracoesRoute
+  '/admin/esqueci-senha': typeof AdminEsqueciSenhaRoute
+  '/admin/financeiro': typeof AdminFinanceiroRoute
+  '/admin/login': typeof AdminLoginRoute
+  '/admin/materiais': typeof AdminMateriaisRoute
+  '/admin/redefinir-senha': typeof AdminRedefinirSenhaRoute
+  '/admin/relatorios': typeof AdminRelatoriosRoute
+  '/produto/$slug': typeof ProdutoSlugRoute
+  '/admin/': typeof AdminIndexRoute
+  '/admin/pedidos/$id': typeof AdminPedidosIdRoute
+  '/admin/pedidos/novo': typeof AdminPedidosNovoRoute
+  '/admin/produtos/$id': typeof AdminProdutosIdRoute
+  '/admin/produtos/novo': typeof AdminProdutosNovoRoute
+  '/admin/pedidos/': typeof AdminPedidosIndexRoute
+  '/admin/produtos/': typeof AdminProdutosIndexRoute
   '/api/public/img/$': typeof ApiPublicImgSplatRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/carrinho': typeof CarrinhoRoute
+  '/checkout': typeof CheckoutRoute
+  '/produtos': typeof ProdutosRoute
+  '/admin/agenda': typeof AdminAgendaRoute
+  '/admin/categorias': typeof AdminCategoriasRoute
+  '/admin/change-password': typeof AdminChangePasswordRoute
+  '/admin/configuracoes': typeof AdminConfiguracoesRoute
+  '/admin/esqueci-senha': typeof AdminEsqueciSenhaRoute
+  '/admin/financeiro': typeof AdminFinanceiroRoute
+  '/admin/login': typeof AdminLoginRoute
+  '/admin/materiais': typeof AdminMateriaisRoute
+  '/admin/redefinir-senha': typeof AdminRedefinirSenhaRoute
+  '/admin/relatorios': typeof AdminRelatoriosRoute
+  '/produto/$slug': typeof ProdutoSlugRoute
+  '/admin': typeof AdminIndexRoute
+  '/admin/pedidos/$id': typeof AdminPedidosIdRoute
+  '/admin/pedidos/novo': typeof AdminPedidosNovoRoute
+  '/admin/produtos/$id': typeof AdminProdutosIdRoute
+  '/admin/produtos/novo': typeof AdminProdutosNovoRoute
+  '/admin/pedidos': typeof AdminPedidosIndexRoute
+  '/admin/produtos': typeof AdminProdutosIndexRoute
   '/api/public/img/$': typeof ApiPublicImgSplatRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/carrinho': typeof CarrinhoRoute
+  '/checkout': typeof CheckoutRoute
+  '/produtos': typeof ProdutosRoute
+  '/admin/agenda': typeof AdminAgendaRoute
+  '/admin/categorias': typeof AdminCategoriasRoute
+  '/admin/change-password': typeof AdminChangePasswordRoute
+  '/admin/configuracoes': typeof AdminConfiguracoesRoute
+  '/admin/esqueci-senha': typeof AdminEsqueciSenhaRoute
+  '/admin/financeiro': typeof AdminFinanceiroRoute
+  '/admin/login': typeof AdminLoginRoute
+  '/admin/materiais': typeof AdminMateriaisRoute
+  '/admin/redefinir-senha': typeof AdminRedefinirSenhaRoute
+  '/admin/relatorios': typeof AdminRelatoriosRoute
+  '/produto/$slug': typeof ProdutoSlugRoute
+  '/admin/': typeof AdminIndexRoute
+  '/admin/pedidos/$id': typeof AdminPedidosIdRoute
+  '/admin/pedidos/novo': typeof AdminPedidosNovoRoute
+  '/admin/produtos/$id': typeof AdminProdutosIdRoute
+  '/admin/produtos/novo': typeof AdminProdutosNovoRoute
+  '/admin/pedidos/': typeof AdminPedidosIndexRoute
+  '/admin/produtos/': typeof AdminProdutosIndexRoute
   '/api/public/img/$': typeof ApiPublicImgSplatRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/api/public/img/$'
+  fullPaths:
+    | '/'
+    | '/carrinho'
+    | '/checkout'
+    | '/produtos'
+    | '/admin/agenda'
+    | '/admin/categorias'
+    | '/admin/change-password'
+    | '/admin/configuracoes'
+    | '/admin/esqueci-senha'
+    | '/admin/financeiro'
+    | '/admin/login'
+    | '/admin/materiais'
+    | '/admin/redefinir-senha'
+    | '/admin/relatorios'
+    | '/produto/$slug'
+    | '/admin/'
+    | '/admin/pedidos/$id'
+    | '/admin/pedidos/novo'
+    | '/admin/produtos/$id'
+    | '/admin/produtos/novo'
+    | '/admin/pedidos/'
+    | '/admin/produtos/'
+    | '/api/public/img/$'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/api/public/img/$'
-  id: '__root__' | '/' | '/api/public/img/$'
+  to:
+    | '/'
+    | '/carrinho'
+    | '/checkout'
+    | '/produtos'
+    | '/admin/agenda'
+    | '/admin/categorias'
+    | '/admin/change-password'
+    | '/admin/configuracoes'
+    | '/admin/esqueci-senha'
+    | '/admin/financeiro'
+    | '/admin/login'
+    | '/admin/materiais'
+    | '/admin/redefinir-senha'
+    | '/admin/relatorios'
+    | '/produto/$slug'
+    | '/admin'
+    | '/admin/pedidos/$id'
+    | '/admin/pedidos/novo'
+    | '/admin/produtos/$id'
+    | '/admin/produtos/novo'
+    | '/admin/pedidos'
+    | '/admin/produtos'
+    | '/api/public/img/$'
+  id:
+    | '__root__'
+    | '/'
+    | '/carrinho'
+    | '/checkout'
+    | '/produtos'
+    | '/admin/agenda'
+    | '/admin/categorias'
+    | '/admin/change-password'
+    | '/admin/configuracoes'
+    | '/admin/esqueci-senha'
+    | '/admin/financeiro'
+    | '/admin/login'
+    | '/admin/materiais'
+    | '/admin/redefinir-senha'
+    | '/admin/relatorios'
+    | '/produto/$slug'
+    | '/admin/'
+    | '/admin/pedidos/$id'
+    | '/admin/pedidos/novo'
+    | '/admin/produtos/$id'
+    | '/admin/produtos/novo'
+    | '/admin/pedidos/'
+    | '/admin/produtos/'
+    | '/api/public/img/$'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CarrinhoRoute: typeof CarrinhoRoute
+  CheckoutRoute: typeof CheckoutRoute
+  ProdutosRoute: typeof ProdutosRoute
+  AdminAgendaRoute: typeof AdminAgendaRoute
+  AdminCategoriasRoute: typeof AdminCategoriasRoute
+  AdminChangePasswordRoute: typeof AdminChangePasswordRoute
+  AdminConfiguracoesRoute: typeof AdminConfiguracoesRoute
+  AdminEsqueciSenhaRoute: typeof AdminEsqueciSenhaRoute
+  AdminFinanceiroRoute: typeof AdminFinanceiroRoute
+  AdminLoginRoute: typeof AdminLoginRoute
+  AdminMateriaisRoute: typeof AdminMateriaisRoute
+  AdminRedefinirSenhaRoute: typeof AdminRedefinirSenhaRoute
+  AdminRelatoriosRoute: typeof AdminRelatoriosRoute
+  ProdutoSlugRoute: typeof ProdutoSlugRoute
+  AdminIndexRoute: typeof AdminIndexRoute
+  AdminPedidosIdRoute: typeof AdminPedidosIdRoute
+  AdminPedidosNovoRoute: typeof AdminPedidosNovoRoute
+  AdminProdutosIdRoute: typeof AdminProdutosIdRoute
+  AdminProdutosNovoRoute: typeof AdminProdutosNovoRoute
+  AdminPedidosIndexRoute: typeof AdminPedidosIndexRoute
+  AdminProdutosIndexRoute: typeof AdminProdutosIndexRoute
   ApiPublicImgSplatRoute: typeof ApiPublicImgSplatRoute
 }
 
@@ -56,6 +336,153 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/carrinho': {
+      id: '/carrinho'
+      path: '/carrinho'
+      fullPath: '/carrinho'
+      preLoaderRoute: typeof CarrinhoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/checkout': {
+      id: '/checkout'
+      path: '/checkout'
+      fullPath: '/checkout'
+      preLoaderRoute: typeof CheckoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/produtos': {
+      id: '/produtos'
+      path: '/produtos'
+      fullPath: '/produtos'
+      preLoaderRoute: typeof ProdutosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/': {
+      id: '/admin/'
+      path: '/admin'
+      fullPath: '/admin/'
+      preLoaderRoute: typeof AdminIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/agenda': {
+      id: '/admin/agenda'
+      path: '/admin/agenda'
+      fullPath: '/admin/agenda'
+      preLoaderRoute: typeof AdminAgendaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/categorias': {
+      id: '/admin/categorias'
+      path: '/admin/categorias'
+      fullPath: '/admin/categorias'
+      preLoaderRoute: typeof AdminCategoriasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/change-password': {
+      id: '/admin/change-password'
+      path: '/admin/change-password'
+      fullPath: '/admin/change-password'
+      preLoaderRoute: typeof AdminChangePasswordRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/configuracoes': {
+      id: '/admin/configuracoes'
+      path: '/admin/configuracoes'
+      fullPath: '/admin/configuracoes'
+      preLoaderRoute: typeof AdminConfiguracoesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/esqueci-senha': {
+      id: '/admin/esqueci-senha'
+      path: '/admin/esqueci-senha'
+      fullPath: '/admin/esqueci-senha'
+      preLoaderRoute: typeof AdminEsqueciSenhaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/financeiro': {
+      id: '/admin/financeiro'
+      path: '/admin/financeiro'
+      fullPath: '/admin/financeiro'
+      preLoaderRoute: typeof AdminFinanceiroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/login': {
+      id: '/admin/login'
+      path: '/admin/login'
+      fullPath: '/admin/login'
+      preLoaderRoute: typeof AdminLoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/materiais': {
+      id: '/admin/materiais'
+      path: '/admin/materiais'
+      fullPath: '/admin/materiais'
+      preLoaderRoute: typeof AdminMateriaisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/redefinir-senha': {
+      id: '/admin/redefinir-senha'
+      path: '/admin/redefinir-senha'
+      fullPath: '/admin/redefinir-senha'
+      preLoaderRoute: typeof AdminRedefinirSenhaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/relatorios': {
+      id: '/admin/relatorios'
+      path: '/admin/relatorios'
+      fullPath: '/admin/relatorios'
+      preLoaderRoute: typeof AdminRelatoriosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/produto/$slug': {
+      id: '/produto/$slug'
+      path: '/produto/$slug'
+      fullPath: '/produto/$slug'
+      preLoaderRoute: typeof ProdutoSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/pedidos/': {
+      id: '/admin/pedidos/'
+      path: '/admin/pedidos'
+      fullPath: '/admin/pedidos/'
+      preLoaderRoute: typeof AdminPedidosIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/pedidos/$id': {
+      id: '/admin/pedidos/$id'
+      path: '/admin/pedidos/$id'
+      fullPath: '/admin/pedidos/$id'
+      preLoaderRoute: typeof AdminPedidosIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/pedidos/novo': {
+      id: '/admin/pedidos/novo'
+      path: '/admin/pedidos/novo'
+      fullPath: '/admin/pedidos/novo'
+      preLoaderRoute: typeof AdminPedidosNovoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/produtos/': {
+      id: '/admin/produtos/'
+      path: '/admin/produtos'
+      fullPath: '/admin/produtos/'
+      preLoaderRoute: typeof AdminProdutosIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/produtos/$id': {
+      id: '/admin/produtos/$id'
+      path: '/admin/produtos/$id'
+      fullPath: '/admin/produtos/$id'
+      preLoaderRoute: typeof AdminProdutosIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/produtos/novo': {
+      id: '/admin/produtos/novo'
+      path: '/admin/produtos/novo'
+      fullPath: '/admin/produtos/novo'
+      preLoaderRoute: typeof AdminProdutosNovoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/public/img/$': {
@@ -70,6 +497,27 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CarrinhoRoute: CarrinhoRoute,
+  CheckoutRoute: CheckoutRoute,
+  ProdutosRoute: ProdutosRoute,
+  AdminAgendaRoute: AdminAgendaRoute,
+  AdminCategoriasRoute: AdminCategoriasRoute,
+  AdminChangePasswordRoute: AdminChangePasswordRoute,
+  AdminConfiguracoesRoute: AdminConfiguracoesRoute,
+  AdminEsqueciSenhaRoute: AdminEsqueciSenhaRoute,
+  AdminFinanceiroRoute: AdminFinanceiroRoute,
+  AdminLoginRoute: AdminLoginRoute,
+  AdminMateriaisRoute: AdminMateriaisRoute,
+  AdminRedefinirSenhaRoute: AdminRedefinirSenhaRoute,
+  AdminRelatoriosRoute: AdminRelatoriosRoute,
+  ProdutoSlugRoute: ProdutoSlugRoute,
+  AdminIndexRoute: AdminIndexRoute,
+  AdminPedidosIdRoute: AdminPedidosIdRoute,
+  AdminPedidosNovoRoute: AdminPedidosNovoRoute,
+  AdminProdutosIdRoute: AdminProdutosIdRoute,
+  AdminProdutosNovoRoute: AdminProdutosNovoRoute,
+  AdminPedidosIndexRoute: AdminPedidosIndexRoute,
+  AdminProdutosIndexRoute: AdminProdutosIndexRoute,
   ApiPublicImgSplatRoute: ApiPublicImgSplatRoute,
 }
 export const routeTree = rootRouteImport

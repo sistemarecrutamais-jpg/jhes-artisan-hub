@@ -1882,7 +1882,7 @@ E-mail administrativo inicial:
 joicegoncalvesvh@gmail.com
 
 Senha inicial temporária:
-dindinha123
+(ver cofre de credenciais / variável de ambiente — nunca versionar a senha real em texto puro)
 
 Essas credenciais devem ser utilizadas SOMENTE para a criação inicial da conta administrativa.
 
