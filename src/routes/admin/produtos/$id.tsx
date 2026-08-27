@@ -138,7 +138,7 @@ function EditarProdutoPage() {
       return;
     }
 
-    await supabase.from("product_images").insert({
+    const { error: insertErr } = await supabase.from("product_images").insert({
       product_id: id,
       url: path,
       storage_path: path,
@@ -148,6 +148,11 @@ function EditarProdutoPage() {
 
     setUploading(false);
     if (fileInputRef.current) fileInputRef.current.value = "";
+
+    if (insertErr) {
+      setUploadError(`Upload feito, mas não salvou no banco: ${insertErr.message}`);
+      return;
+    }
     await refresh();
   }
 
