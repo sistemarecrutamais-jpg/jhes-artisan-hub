@@ -36,6 +36,12 @@ export type PublicProduct = {
   colors: { name: string; hex: string | null }[];
 };
 
+export const getSiteSettings = createServerFn({ method: "GET" }).handler(async () => {
+  const supabase = publicClient();
+  const { data: settings } = await supabase.from("settings").select("*").maybeSingle();
+  return settings ?? null;
+});
+
 export const getStorefront = createServerFn({ method: "GET" }).handler(async () => {
   const supabase = publicClient();
   const [{ data: settings }, { data: categories }, { data: products }] = await Promise.all([

@@ -7,6 +7,10 @@ import { SiteLayout } from "@/components/site-layout";
 import { storefrontQuery } from "@/lib/storefront-query";
 
 export const Route = createFileRoute("/produtos")({
+  validateSearch: (search: Record<string, unknown>): { categoria?: string } => {
+    const categoria = search["categoria"];
+    return typeof categoria === "string" ? { categoria } : {};
+  },
   loader: ({ context }) => context.queryClient.ensureQueryData(storefrontQuery),
   head: () => ({
     meta: [
@@ -24,7 +28,8 @@ const ALL = "__all__";
 
 function ProdutosPage() {
   const { data } = useSuspenseQuery(storefrontQuery);
-  const [categoryId, setCategoryId] = useState<string>(ALL);
+  const { categoria } = Route.useSearch();
+  const [categoryId, setCategoryId] = useState<string>(categoria ?? ALL);
 
   const filtered = useMemo(() => {
     if (categoryId === ALL) return data.products;

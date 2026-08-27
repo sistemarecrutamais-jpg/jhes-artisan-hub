@@ -44,6 +44,8 @@
   --color-rose-foreground: var(--rose-foreground);
   --color-deep: var(--deep);
   --color-deep-foreground: var(--deep-foreground);
+  --color-mustard: var(--mustard);
+  --color-mustard-foreground: var(--mustard-foreground);
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
   --color-chart-3: var(--chart-3);
@@ -88,6 +90,8 @@
   --rose-foreground: oklch(0.36 0.07 15);
   --deep: oklch(0.31 0.062 245);
   --deep-foreground: oklch(0.985 0.008 90);
+  --mustard: oklch(0.78 0.1 78);
+  --mustard-foreground: oklch(0.32 0.07 70);
   --chart-1: oklch(0.44 0.068 213);
   --chart-2: oklch(0.78 0.048 152);
   --chart-3: oklch(0.82 0.075 15);
