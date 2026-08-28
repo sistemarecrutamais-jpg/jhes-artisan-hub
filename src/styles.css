@@ -153,6 +153,10 @@
   font-family: var(--font-display);
 }
 
+#lovable-badge {
+  display: none !important;
+}
+
 @utility bg-linen {
   background-image: radial-gradient(
       circle at 1px 1px,
