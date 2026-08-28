@@ -1,9 +1,9 @@
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Flower2, Leaf, Search, Sparkles, ShoppingBag, Gift, ArrowRight } from "lucide-react";
+import { Search, Sparkles, ShoppingBag, Gift, ArrowRight } from "lucide-react";
 
 import hero from "@/assets/hero-atelie.jpg";
-import logo from "@/assets/logo-jhe.png";
+import logo from "@/assets/logo-jhe-oficial.png";
 import { ProductCard } from "@/components/product-card";
 import { SiteLayout } from "@/components/site-layout";
 import { storefrontQuery } from "@/lib/storefront-query";
@@ -95,25 +95,16 @@ function Home() {
             </div>
           </div>
 
-          {/* Decorative side: the official logo, never redrawn, with soft accents around it */}
+          {/* Decorative side: the official logo, never redrawn, with a soft glow behind it */}
           <div className="order-1 md:order-2 relative mx-auto flex w-full max-w-sm items-center justify-center py-4 md:max-w-md">
-            <div className="absolute h-64 w-64 rounded-full bg-sage/25 blur-2xl md:h-80 md:w-80" />
-            <div className="absolute -right-4 top-4 h-28 w-28 rounded-full bg-rose/30 blur-xl" />
-            <div className="absolute -left-2 bottom-6 h-20 w-20 rounded-full bg-mustard/25 blur-lg" />
-
-            <Flower2
-              className="absolute -left-2 top-2 h-7 w-7 text-rose-foreground/70 md:h-8 md:w-8"
-              aria-hidden="true"
-            />
-            <Leaf
-              className="absolute -right-1 bottom-8 h-7 w-7 text-sage-foreground/70 md:h-8 md:w-8"
-              aria-hidden="true"
-            />
+            <div className="absolute h-64 w-64 rounded-full bg-sage/20 blur-3xl md:h-80 md:w-80" />
+            <div className="absolute -right-6 top-6 h-32 w-32 rounded-full bg-rose/25 blur-2xl" />
+            <div className="absolute -left-4 bottom-8 h-24 w-24 rounded-full bg-mustard/20 blur-2xl" />
 
             <img
               src={logo}
               alt="Ateliê da JHE — costura, crochê e artesanato"
-              className="relative h-56 w-56 rounded-full border-4 border-card object-cover shadow-[var(--shadow-soft)] md:h-72 md:w-72"
+              className="relative h-64 w-64 object-contain drop-shadow-xl md:h-80 md:w-80"
             />
           </div>
         </div>

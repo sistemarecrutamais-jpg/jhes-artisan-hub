@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { ShoppingBag, Menu, X } from "lucide-react";
 import { useState, type ReactNode } from "react";
 
-import logo from "@/assets/logo-jhe.png";
+import logo from "@/assets/logo-jhe-oficial.png";
 import { useCart } from "@/lib/cart";
 import { cn } from "@/lib/utils";
 import { siteSettingsQuery } from "@/lib/storefront-query";
@@ -68,7 +68,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
             <img
               src={logo}
               alt="Ateliê da JHE"
-              className="h-11 w-11 shrink-0 rounded-full border border-border/60 object-cover shadow-sm md:h-12 md:w-12"
+              className="h-11 w-11 shrink-0 object-contain drop-shadow-sm md:h-12 md:w-12"
             />
             <span className="leading-tight">
               <span className="block text-display text-lg font-semibold text-deep">
@@ -138,11 +138,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
         <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-12 sm:grid-cols-3">
           <div>
             <div className="flex items-center gap-3">
-              <img
-                src={logo}
-                alt="Ateliê da JHE"
-                className="h-10 w-10 rounded-full border border-border/60 object-cover"
-              />
+              <img src={logo} alt="Ateliê da JHE" className="h-10 w-10 object-contain" />
               <div>
                 <p className="text-display text-base font-semibold text-deep">Ateliê da JHE</p>
                 <p className="text-[11px] uppercase tracking-[0.12em] text-muted-foreground">
